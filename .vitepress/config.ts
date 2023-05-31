@@ -4,6 +4,8 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "docs",
   description: "gzp",
+  base: "/docs/",
+  outDir: "./.vitepress/docs",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -30,7 +32,7 @@ export default defineConfig({
       },
       {
         text: "自动化",
-        items: [{ text: "CI/CD", link: "/web/website/CI/index" }],
+        items: [{ text: "jenkins", link: "/web/website/jenkins/index" }],
       },
     ],
 
