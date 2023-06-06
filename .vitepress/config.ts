@@ -8,14 +8,22 @@ export default defineConfig({
   outDir: "./.vitepress/docs",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: "/public/img/gzp.jpeg",
+    outline: "deep",
+    outlineTitle: "大纲",
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2019-present Evan You",
+    },
     nav: [
-      { text: "Home", link: "/" },
+      { text: "主页", link: "/" },
       { text: "前端", link: "/web/index" },
     ],
 
     sidebar: [
       {
         text: "JavaScript",
+        // collapsed: true,
         items: [{ text: "1111", link: "/web/index" }],
       },
       {
@@ -24,11 +32,10 @@ export default defineConfig({
       },
       {
         text: "React",
-        items: [],
-      },
-      {
-        text: "React Native",
-        items: [],
+        items: [
+          { text: "React Native ODM打包", link: "/web/react/rn-odm/index" },
+          { text: "React Native 升级", link: "/web/react/rn-upgrade/index" },
+        ],
       },
       {
         text: "自动化",
